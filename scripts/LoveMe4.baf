@@ -1,0 +1,43 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	Wait(2)
+	DisplayStringHead(Myself,~Now you've done it!~)
+	MoveToPointNoInterrupt([2361.597])
+	DisplayStringHead(Myself,~I'm coming for you!~)
+	Wait(1)
+	MoveToPointNoInterrupt([2807.588])
+	DisplayStringHead(Myself,~You'll pay for this!~)
+	MoveToPointNoInterrupt([2471.1056])
+	DisplayStringHead(Myself,~You're gonna be sooooooooo sorry!~)
+	MoveToPointNoInterrupt([2571.1308])
+	DisplayStringHead(Myself,~Gotcha!~)
+	MoveToPointNoInterrupt([2771.1708])
+	Wait(1)
+	SetGlobal("MRCampfireMusic","GLOBAL",8)
+	StartDialog("Player1",Player1)
+	EndCutSceneMode()
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId("Imoen2")
+	MoveViewPoint([2721.1658],VERY_FAST)
+	DisplayStringHead(Myself,~You'll never catch me!~)
+	MoveToPointNoInterrupt([2311.647])
+	DisplayStringHead(Myself,~Slowpoke!~)
+	MoveToPointNoInterrupt([2757.638])
+	MoveToPointNoInterrupt([2581.906])
+	DisplayStringHead(Myself,~You're still too slow!~)
+	MoveToPointNoInterrupt([2421.1106])
+	DisplayStringHead(Myself,~Give up?~)
+	MoveToPointNoInterrupt([2521.1458])
+	DisplayStringHead(Myself,~(laughs)~)
+	MoveToPointNoInterrupt([2721.1658])
+END
+
+

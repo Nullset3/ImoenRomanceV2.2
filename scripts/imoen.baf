@@ -1,0 +1,150 @@
+// Imoen Lovetalk Scripts
+
+IF
+	Global("BeginRomance","GLOBAL",1)
+THEN
+	RESPONSE #100
+	RealSetGlobalTimer("MRImoenLovetalkTimer","GLOBAL",1800)
+	SetGlobal("MRKinCounter","GLOBAL",10)
+	SetGlobal("MRLoveTalk","GLOBAL",1)
+	SetGlobal("ImoenRomanceActive","GLOBAL",1)
+	SetGlobal("BeginRomance","GLOBAL",2)
+        SetGlobal("MRExitUnderdark","GLOBAL",1)
+        SetGlobal("MRResolutionReply","GLOBAL",1)
+        SetGlobal("RJImoenStartFlirtTOB","GLOBAL",2)
+END
+
+IF
+	InParty("Imoen2")
+	See(Player1)
+        Global("MRLoveTalk","GLOBAL",1)
+        AreaCheck("AR1513")
+	!ActuallyInCombat()
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!Global("ImoenRomanceActive","GLOBAL",3)
+THEN
+	RESPONSE #100
+        SetGlobal("MRLoveTalk","GLOBAL",2)
+	SetGlobal("MRNoPid","GLOBAL",1)
+	Dialogue(Player1)
+	SetGlobal("MRNoPid","GLOBAL",0)
+END
+
+IF
+	InParty("Imoen2")
+	See(Player1)
+        Global("MRLoveTalk","GLOBAL",3)
+        AreaCheck("AR1512")
+	!ActuallyInCombat()
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!Global("ImoenRomanceActive","GLOBAL",3)
+THEN
+	RESPONSE #100
+        SetGlobal("MRLoveTalk","GLOBAL",4)
+	SetGlobal("MRNoPid","GLOBAL",1)
+	Dialogue(Player1)
+	SetGlobal("MRNoPid","GLOBAL",0)
+END
+
+IF
+	InParty("Imoen2")
+	See(Player1)
+        Global("MRLoveTalk","GLOBAL",5)
+        AreaCheck("AR1500")
+	!ActuallyInCombat()
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!Global("ImoenRomanceActive","GLOBAL",3)
+THEN
+	RESPONSE #100
+        SetGlobal("MRLoveTalk","GLOBAL",6)
+	SetGlobal("MRNoPid","GLOBAL",1)
+	Dialogue(Player1)
+	SetGlobal("MRNoPid","GLOBAL",0)
+END
+
+IF
+	InParty("Imoen2")
+	See(Player1)
+        Global("MRLoveTalk","GLOBAL",7)
+        AreaCheck("AR2401")
+	!ActuallyInCombat()
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!Global("ImoenRomanceActive","GLOBAL",3)
+THEN
+	RESPONSE #100
+        SetGlobal("MRLoveTalk","GLOBAL",8)
+	SetGlobal("MRNoPid","GLOBAL",1)
+	Dialogue(Player1)
+	SetGlobal("MRNoPid","GLOBAL",0)
+END
+
+IF
+	InParty("Imoen2")
+	See(Player1)
+        Global("MRLoveTalk","GLOBAL",9)
+        AreaCheck("AR2601")
+	!ActuallyInCombat()
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!Global("ImoenRomanceActive","GLOBAL",3)
+THEN
+	RESPONSE #100
+        SetGlobal("MRLoveTalk","GLOBAL",10)
+	SetGlobal("MRNoPid","GLOBAL",1)
+	Dialogue(Player1)
+	SetGlobal("MRNoPid","GLOBAL",0)
+END
+
+IF
+	InParty("Imoen2")
+	See(Player1)
+        Global("MRLoveTalk","GLOBAL",11)
+        AreaCheck("AR2804")
+	!ActuallyInCombat()
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!Global("ImoenRomanceActive","GLOBAL",3)
+THEN
+	RESPONSE #100
+        SetGlobal("MRLoveTalk","GLOBAL",12)
+	SetGlobal("MRNoPid","GLOBAL",1)
+	Dialogue(Player1)
+	SetGlobal("MRNoPid","GLOBAL",0)
+END
+
+IF
+	InParty("Imoen2")
+	See(Player1)
+        Global("MRExitUnderdark","GLOBAL",1)
+        Global("ToldElhanAboutBodhi","GLOBAL",1)
+        AreaCheck("AR2500")
+	!ActuallyInCombat()
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!Global("ImoenRomanceActive","GLOBAL",3)
+THEN
+	RESPONSE #100
+        SetGlobal("MRExitUnderdark","GLOBAL",2)
+	SetGlobal("MRNoPid","GLOBAL",1)
+	Dialogue(Player1)
+	SetGlobal("MRNoPid","GLOBAL",0)
+END
+
+IF
+	InParty("Imoen2")
+	See(Player1)
+        Global("MRCampfire","GLOBAL",1)
+	!ActuallyInCombat()
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!Global("ImoenRomanceActive","GLOBAL",3)
+THEN
+	RESPONSE #100
+	SetGlobal("MRNoPid","GLOBAL",1)
+	Dialogue(Player1)
+	SetGlobal("MRNoPid","GLOBAL",0)
+END

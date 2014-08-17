@@ -1,0 +1,12 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	MoveViewObject("Imoen2",4)
+	MoveToObject("Imoen2")
+	Wait(2)
+	SetGlobal("MRAftermath","GLOBAL",2)
+	ActionOverride("Imoen2",StartDialog("BIMOEN2",Player1))
+	EndCutSceneMode()
+END

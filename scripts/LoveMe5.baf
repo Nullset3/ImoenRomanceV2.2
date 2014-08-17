@@ -1,0 +1,30 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	Wait(1)
+	FadeToColor([30.0],0)
+	Wait(2)
+	ActionOverride("Imoen2",JumpToPoint([2511.423]))
+	JumpToPoint([2711.423])
+	MoveViewPoint([2711.423],0)
+	StartMovie("Restcamp")
+	DayNight(14)
+	Wait(2)
+	MoveViewPoint([2600.1400],0)
+	ActionOverride("Imoen2",JumpToPoint([2600.1400]))
+	ActionOverride("Imoen2",Face(7))
+	JumpToPoint([2762.1658])
+	Face(6)
+	FadeFromColor([30.0],0)
+	SetGlobal("MRAftermath","GLOBAL",1) 
+	Wait(4)
+	StartDialog("player1",Player1)
+	EndCutSceneMode()
+END		
+
+
+
+
+

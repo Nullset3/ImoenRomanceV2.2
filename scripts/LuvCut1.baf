@@ -1,0 +1,10 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	ApplySpell("Imoen2",SURE_SLEEP)
+	SetGlobal("ImoenUnconsciousMR","GLOBAL",1)
+	Wait(3)
+	StartDialog("Player1",Player1)
+END

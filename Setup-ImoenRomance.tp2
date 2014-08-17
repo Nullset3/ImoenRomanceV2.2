@@ -1,0 +1,364 @@
+// Imoen Romance Tp2
+// Written by TC Dale
+// Coded by theacefes
+
+BACKUP ~imoenRomance/backup~
+AUTHOR ~T.C Dale~
+
+VERSION ~1.0~
+README ~imoenRomance/README - Imoen Romance.txt~
+
+
+
+BEGIN ~Imoen NPC Romance Mod for BG2:SoA (2.1 Version!)~
+
+// Adds CD_STATE_NOTVALID state (http://www.shsforums.net/topic/36779-using-cd-state-notvalid/)
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+// Area and dream
+
+COPY ~imoenRomance/cres/BoyMR.cre~ ~override\BoyMR.cre~
+	SAY NAME1 ~Young Boy~
+	SAY NAME2 ~Young Boy~
+
+COPY ~imoenRomance/cres/BoyFemMR.cre~ ~override\BoyFemMR.cre~
+	SAY NAME1 ~Young Girl~
+	SAY NAME2 ~Young Girl~
+
+COPY ~imoenRomance/cres/GirlMR.cre~ ~override\GirlMR.cre~
+	SAY NAME1 ~Very young Imoen~
+	SAY NAME2 ~Very young Imoen~
+
+COPY ~imoenRomance/cres/ImDream.cre~ ~override\ImDream.cre~
+	SAY NAME1 ~Imoen~
+	SAY NAME2 ~Imoen~
+
+COPY ~imoenRomance/cres/GoblinMR.cre~ ~override\GoblinMR.cre~
+	SAY NAME1 ~Nasty Goblin~
+	SAY NAME2 ~Nasty Goblin~
+
+COPY ~imoenRomance/cres/youngerc.cre~ ~override\youngerc.cre~
+	SAY NAME1 ~Teen guy~
+	SAY NAME2 ~Teen guy~
+
+COPY ~imoenRomance/cres/youngeFc.cre~ ~override\youngeFc.cre~
+	SAY NAME1 ~Teen girl~
+	SAY NAME2 ~Teen girl~
+
+COPY ~imoenRomance/cres/youngeri.cre~ ~override\youngeri.cre~
+	SAY NAME1 ~Teen Imoen~
+	SAY NAME2 ~Teen Imoen~
+
+COPY ~imoenRomance/cres/Hyoungch.cre~ ~override\hyoungch.cre~
+	SAY NAME1 ~Young Man~
+	SAY NAME2 ~Young Man~
+
+COPY ~imoenRomance/cres/Hyounch2.cre~ ~override\hyounch2.cre~
+	SAY NAME1 ~Young Man~
+	SAY NAME2 ~Young Man~
+
+COPY ~imoenRomance/cres/HyoungFc.cre~ ~override\hyoungFc.cre~
+	SAY NAME1 ~Young Woman~
+	SAY NAME2 ~Young Woman~
+
+COPY ~imoenRomance/cres/HyounFc2.cre~ ~override\hyounFc2.cre~
+	SAY NAME1 ~Young Woman~
+	SAY NAME2 ~Young Woman~
+
+COPY ~imoenRomance/cres/Hyoungim.cre~ ~override\hyoungim.cre~
+	SAY NAME1 ~Younger Imoen~
+	SAY NAME2 ~Younger Imoen~
+
+COPY ~imoenRomance/cres/Hyounim2.cre~ ~override\hyounim2.cre~
+	SAY NAME1 ~Younger Imoen~
+	SAY NAME2 ~Younger Imoen~
+
+COPY ~imoenRomance/cres/ImDrea2.cre~ ~override\ImDrea2.cre~
+	SAY NAME1 ~Imoen~
+	SAY NAME2 ~Imoen~
+
+
+
+
+COPY  ~imoenRomance/areas/AR26MRSR.bmp~ ~override\AR26MRSR.bmp~
+      ~imoenRomance/areas/AR26MR.are~ ~override\AR26MR.are~
+      ~imoenRomance/areas/AR26MR.mos~ ~override\AR26MR.mos~
+      ~imoenRomance/areas/AR26MR.wed~ ~override\AR26MR.wed~
+      ~imoenRomance/areas/AR26MRHT.bmp~ ~override\AR26MRHT.bmp~
+      ~imoenRomance/areas/AR26MRLM.bmp~ ~override\AR26MRLM.bmp~
+      ~imoenRomance/areas/AR64MR.are~ ~override\AR64MR.are~
+      ~imoenRomance/areas/AR28MR.are~ ~override\AR28MR.are~
+      ~imoenRomance/areas/AR17MR.are~ ~override\AR17MR.are~
+
+COPY ~imoenRomance/areas/tisunpack.exe~ ~override\tisunpack.exe~
+     ~imoenRomance/areas/AR26MR.tiz~ ~override\AR26MR.tiz~
+
+COPY  ~imoenRomance/bat/ArUnPackMR.bat~ ~ArUnPackMR.bat~
+
+        // Dream Cutscenes - male version
+COMPILE	
+        ~imoenRomance/scripts/dreamCutscenes/Cutim00.baf~
+USING
+		~imoenRomance/scripts/dreamCutscenes/tras/Cutim00.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim01.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim01.tra~
+
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim02.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim02.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim03.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim03.tra~
+
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim04.baf~
+USING
+		~imoenRomance/scripts/dreamCutscenes/tras/Cutim04.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim05.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim05.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim06.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim06.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim07.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim07.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim08.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim08.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim09.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim09.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim10.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim10.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim11.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim11.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim12.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim12.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim13.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim13.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim14.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim14.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim15.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim15.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/Cutim16.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/Cutim16.tra~
+
+		
+		
+		// Dream Cutscenes - female version
+COMPILE	
+        ~imoenRomance/scripts/dreamCutscenes/CutiF00.baf~
+USING
+		~imoenRomance/scripts/dreamCutscenes/tras/CutiF00.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF01.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF01.tra~
+
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF02.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF02.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF03.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF03.tra~
+
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF04.baf~
+USING
+		~imoenRomance/scripts/dreamCutscenes/tras/CutiF04.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF05.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF05.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF06.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF06.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF07.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF07.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF08.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF08.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF09.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF09.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF10.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF10.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF11.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF11.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF12.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF12.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF13.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF13.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF14.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF14.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF15.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF15.tra~
+		
+COMPILE
+        ~imoenRomance/scripts/dreamCutscenes/CutiF16.baf~
+USING
+        ~imoenRomance/scripts/dreamCutscenes/tras/CutiF16.tra~
+
+		
+COMPILE
+        
+        //Dream Cutscenes - no fucking clue but they are there
+        ~imoenRomance/scripts/dreamCutscenes/Cuti00a.baf~
+        ~imoenRomance/scripts/dreamCutscenes/CuiF03a.baf~
+        ~imoenRomance/scripts/dreamCutscenes/CuiF07a.baf~
+        ~imoenRomance/scripts/dreamCutscenes/CuiF15a.baf~
+        ~imoenRomance/scripts/dreamCutscenes/Cuti03a.baf~
+        ~imoenRomance/scripts/dreamCutscenes/Cuti07a.baf~
+        ~imoenRomance/scripts/dreamCutscenes/Cuti15a.baf~
+
+
+COMPILE
+        
+        //Campfire Cutscenes
+        ~imoenRomance/scripts/LoveMe1.baf~
+        ~imoenRomance/scripts/LoveMe1a.baf~
+        ~imoenRomance/scripts/LoveMe2.baf~
+        ~imoenRomance/scripts/LoveMe2a.baf~
+        ~imoenRomance/scripts/LoveMe3.baf~
+        ~imoenRomance/scripts/LoveMe4.baf~
+        ~imoenRomance/scripts/LoveMe5.baf~
+        ~imoenRomance/scripts/LoveMe5a.baf~
+		
+
+EXTEND_BOTTOM ~Player1d.bcs~ ~imoenRomance/scripts/dreamCutscenes/ImDreams.baf~
+
+PRINT ~Compiling dialogues for the dreams~
+
+COMPILE ~imoenRomance/dialogues/ImDream.d~
+        ~imoenRomance/dialogues/vyoungch.d~
+	~imoenRomance/dialogues/vyoungim.d~
+	~imoenRomance/dialogues/myoungch.d~
+	~imoenRomance/dialogues/myoungim.d~
+	~imoenRomance/dialogues/hyoungch.d~
+	~imoenRomance/dialogues/hyoungim.d~
+	~imoenRomance/dialogues/aeriej.d~
+	~imoenRomance/dialogues/viconij.d~
+	~imoenRomance/dialogues/jaheiraj.d~
+	~imoenRomance/dialogues/anomenj.d~
+
+
+PRINT ~Additional scripts...~
+
+EXTEND_BOTTOM ~aerie.bcs~ ~imoenRomance/scripts/aerie.baf~
+EXTEND_BOTTOM ~viconia.bcs~ ~imoenRomance/scripts/viconia.baf~
+EXTEND_BOTTOM ~jaheira.bcs~ ~imoenRomance/scripts/jaheira.baf~
+EXTEND_BOTTOM ~anomen.bcs~ ~imoenRomance/scripts/anomen.baf~
+
+EXTEND_TOP ~imoen.bcs~ ~imoenRomance/scripts/imoen.baf~
+EXTEND_TOP ~imoen2.bcs~ ~imoenRomance/scripts/imoen.baf~
+EXTEND_TOP ~imoe25.bcs~ ~imoenRomance/scripts/imoentobinitflirt.baf~
+
+//Added since was included in original, may fix something?
+COPY_EXISTING ~IMOEN213.cre~ ~override/IMOEN213.cre~    
+            WRITE_ASCII 0x248 ~IMOEN2~
+
+PRINT ~Imoen Romance...~
+
+COMPILE ~imoenRomance/dialogues/lovescene.d~
+COMPILE ~imoenRomance/dialogues/lovetalks.d~
+
+PRINT ~Player initiated dialogue...~
+
+COMPILE ~imoenRomance/dialogues/pid.d~
+COMPILE ~imoenRomance/dialogues/pidtob.d~
+COMPILE ~imoenRomance/dialogues/imoentobflirt.d~
+
+PRINT ~Dream conversations with love interests...~
+
+COMPILE ~imoenRomance/dialogues/prespellhold.d~
+
+// Epilogues
+
+// Romance
+
+COPY ~imoenRomance/2DAs/BlankEpilogue.2da~ ~override/IMOENND2.2da~
+        REPLACE 99999 ~Imoen and <CHARNAME> returned to Candlekeep for a brief visit after defeating the last Baalspawn. They then settled at the de'Arnise Keep where <CHARNAME> ruled to the delight of the local populace. Imoen bore <CHARNAME> a boy and a girl, whom she proceeded to teach in the ways of mischief at which she was so adept. The children were their father's pride and joy. Far from jealousy (as it turned out), Nalia became a doting aunt, and (to <CHARNAME>'s chagrin) teamed up with Imoen in exploits that scandalized the more sedate local citizens but delighted the majority of the people. <CHARNAME> and Imoen frequently travelled around aiding the helpless, rescuing the deserving, and knocking off the odd dragon. Having amassed a fortune on their travels, they could do pretty much as they chose and did. They remained, to the end of their days, best friends and lovers.~
+
+COMPILE ~imoenRomance/scripts/AR6200.baf~
+
+PRINT ~Music setup (yes, it has been added again)~
+
+COPY  ~imoenRomance\music~ ~override~
+COPY  ~imoenRomance\bat\IMMUSIC.bat~ ~IMMUSIC.bat~
+AT_EXIT ~IMMUSIC.bat~
+
+PRINT ~Area unpack thingy~
+
+AT_EXIT ~ArUnPackMR.bat~

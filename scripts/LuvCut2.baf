@@ -1,0 +1,11 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId("Imoen2")
+	MoveViewObject("Imoen2",4)
+	ActionOverride(Player1,MoveToObject("Imoen2"))
+	Wait(10)
+	SetGlobal("ImoenScaredMR","GLOBAL",1)
+	StartDialog("IMOEN2J",Player1)
+END

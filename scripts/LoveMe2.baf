@@ -1,0 +1,63 @@
+IF 
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	Wait(1)
+	FadeToColor([30.0],0)
+	Wait(2)
+	DayNight(0)
+	JumpToPoint([2680.357])
+	Wait(4)
+	FadeFromColor([30.0],0)
+	Wait(3)
+	SetGlobal("MRCampfireMusic","GLOBAL",3)
+	ActionOverride("Imoen2",StartDialog("IMOEN2J",Player1))
+	EndCutSceneMode()
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player2)
+	Wait(3)
+	JumpToPoint([2618.293])
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player3)
+	Wait(3)
+	JumpToPoint([2611.423])
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player4)
+	Wait(3)
+	JumpToPoint([2506.412])
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player5)
+	Wait(3)
+	JumpToPoint([2440.342])
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+	CutSceneId(Player6)
+	Wait(3)
+	JumpToPoint([2503.286])
+END
+

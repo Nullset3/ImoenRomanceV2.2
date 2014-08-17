@@ -1,0 +1,36 @@
+//Aerie scripting
+IF
+Global("MRHadDream2","GLOBAL",1)
+Global("MRAerieBanterFire","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("MRAerieBanterFire","GLOBAL",1)
+RealSetGlobalTimer("MRDreamComAerieTimer","GLOBAL",2700)
+END
+
+IF
+RealGlobalTimerExpired("MRDreamComAerieTimer","GLOBAL")
+InParty("Aerie")
+See(Player1)
+!ActuallyInCombat()
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+Global("MRAerieBanterFire","GLOBAL", 1)
+!GlobalGT("Chapter","GLOBAL",3)
+!Global("MRDreamRomanceComment","GLOBAL",1)
+THEN
+RESPONSE #100
+IncrementGlobal("MRAerieBanterFire","GLOBAL", 1)
+END
+
+IF
+RealGlobalTimerExpired("MRDreamComAerieTimer","GLOBAL")
+InParty("Aerie")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+Global("MRAerieBanterFire","GLOBAL", 2)
+THEN
+RESPONSE #100
+Dialogue(Player1)
+END

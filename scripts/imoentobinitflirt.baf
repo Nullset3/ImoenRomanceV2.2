@@ -1,0 +1,45 @@
+IF
+    Global("RJImoenStartFlirtTOB","GLOBAL",2)
+    Global("ImoenRomanceActive","GLOBAL",2)
+THEN
+    RESPONSE #100
+        SetGlobal("RJImoenStartFlirtTOB","GLOBAL",0)
+        RealSetGlobalTimer("RJImoenFlirtTOB","LOCALS",300)
+END
+
+IF
+    RealGlobalTimerExpired("RJImoenFlirtTOB","LOCALS")
+    Global("RJImoenStartFlirtTOB","GLOBAL",0)
+    InParty(Myself)
+    !StateCheck(Player1,STATE_SLEEPING)
+    Global("ImoenRomanceActive","GLOBAL",2)
+    !AreaCheck("AR6200")
+    See(Player1)
+    !ActuallyInCombat()
+    !See([ENEMY])
+THEN
+    RESPONSE #100
+        SetGlobal("RJImoenStartFlirtTOB","GLOBAL",1)
+        StartDialogueNoSet(Player1)
+        Wait(1)
+END
+
+IF
+    RealGlobalTimerExpired("RJImoenFlirtTOB","LOCALS")
+    Global("RJImoenStartFlirtTOB","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("RJImoenStartFlirtTOB","GLOBAL",0)
+        RealSetGlobalTimer("RJImoenFlirtTOB","LOCALS",600)
+END
+
+IF
+    RealGlobalTimerExpired("RJImoenFlirtTOB","LOCALS")
+    ActuallyInCombat()
+THEN
+    RESPONSE #100
+        SetGlobal("RJImoenStartFlirtTOB","GLOBAL",0)
+        RealSetGlobalTimer("RJImoenFlirtTOB","LOCALS",100)
+END
+
+

@@ -1,0 +1,49 @@
+// Viconia scripting
+IF
+Global("MRHadDream2","GLOBAL",1)
+Global("MRVicBanterFire","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("MRVicBanterFire","GLOBAL",1)
+RealSetGlobalTimer("MRDreamComVicTimer","GLOBAL",2700)
+END
+
+IF
+RealGlobalTimerExpired("MRDreamComVicTimer","GLOBAL")
+InParty("Viconia")
+See(Player1)
+!ActuallyInCombat()
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+Global("MRVicBanterFire","GLOBAL", 1)
+!GlobalGT("Chapter","GLOBAL",3)
+!Global("MRDreamRomanceComment","GLOBAL",1)
+OR(12)
+  AreaCheck("AR1100")
+  AreaCheck("AR1101")
+  AreaCheck("AR1102")
+  AreaCheck("AR1103")
+  AreaCheck("AR1104")
+  AreaCheck("AR1105")
+  AreaCheck("AR1106")
+  AreaCheck("AR1200")
+  AreaCheck("AR1201")
+  AreaCheck("AR1202")
+  AreaCheck("AR1203")
+  AreaCheck("AR1204")
+THEN
+RESPONSE #100
+IncrementGlobal("MRVicBanterFire","GLOBAL", 1)
+END
+
+IF
+RealGlobalTimerExpired("MRDreamComVicTimer","GLOBAL")
+InParty("Viconia")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+Global("MRVicBanterFire","GLOBAL", 2)
+THEN
+RESPONSE #100
+Dialogue(Player1)
+END

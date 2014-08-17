@@ -1,0 +1,16 @@
+@echo off
+cd override
+oggdec MRImDre1.ogg
+oggdec MRImDre2.ogg
+oggdec MRImInt1.ogg
+oggdec MRImInt2.ogg
+oggdec MRImInt3.ogg
+oggdec MRImEndG.ogg
+oggdec MRImRom1.ogg
+oggdec MRImRom2.ogg
+oggdec MRImRom3.ogg
+oggdec MRImRom4.ogg
+oggdec MRImRom5.ogg
+oggdec MRImRom6.ogg
+del MRIm*.ogg
+del oggdec.exe
